@@ -15,6 +15,13 @@ class AVLTree(BST):
     You should make the necessary changes in the class declaration line above
     and in the constructor below.
     '''
+    def __eq__(self, t2):
+        if self.root is None and t2.root is None:
+            return True
+        if sorted(self.inorder(self.root, [])) == sorted(t2.inorder(t2.root, [])):
+            return True
+        else:
+            return False
 
     def __init__(self, xs=None):
         '''
@@ -200,6 +207,6 @@ class AVLTree(BST):
         elif AVLTree._balance_factor(node) > 0:
             if AVLTree._balance_factor(node.left) < 0:
                 node.left = AVLTree._left_rotate(node.left)
-                node = AVLTree._right_rotate(node)
+
             else:
                 node = AVLTree._right_rotate(node)
