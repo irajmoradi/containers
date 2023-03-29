@@ -13,7 +13,7 @@ class AVLTree(BST):
     FIXME:
     AVLTree is currently not a subclass of BST.
     You should make the necessary changes in the class declaration line above
-    and in the constructor below.
+    and in the Constructor below.
     '''
     def __eq__(self, t2):
         if self.root is None and t2.root is None:
