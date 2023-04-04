@@ -196,6 +196,7 @@ class Heap(BinaryTree):
             else:
                 Heap._remove_bottom_right(node.right, binary_str[1:])
 
+    @staticmethod
     def _find_bottom_right(node, binary_str):
 
         if binary_str[0] == '0':
